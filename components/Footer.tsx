@@ -86,7 +86,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="md:pr-6"
           >
-            <h4 className="text-white/90 text-xs font-medium uppercase tracking-widest mb-5">Flair</h4>
+            <h4 className="text-white/90 text-xs font-medium uppercase tracking-widest mb-5">Parash</h4>
             <ul className="space-y-2.5">
               {footerLinks.main.map((link) => (
                 <li key={link.label}>
@@ -184,7 +184,7 @@ export default function Footer() {
         <div className="footer-brand py-6 md:py-10 overflow-hidden">
           <div className="flex items-end justify-between">
             <h2 className="text-[clamp(4rem,18vw,14rem)] font-light leading-[0.85] tracking-[-0.04em] text-white select-none">
-              Flair<span className="text-[#4ade80]">.</span>
+              Parash<span className="text-[#4ade80]">.</span>
             </h2>
             <motion.div
               initial={{ opacity: 0 }}

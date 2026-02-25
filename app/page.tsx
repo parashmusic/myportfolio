@@ -11,8 +11,8 @@ import { SponsorMarquee } from '@/components/sponsor-marquee'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden">
-      <Preloader />
+    <main className="min-h-screen bg-[#0a0a0a] text-white">
+      {/* <Preloader /> */}
       <Navbar />
       <HeroSection />
       <ServicesSection />

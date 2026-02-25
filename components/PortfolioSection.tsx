@@ -43,92 +43,157 @@ export default function PortfolioSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray<HTMLElement>('.portfolio-card')
-      cards.forEach((card) => {
-        // Card entrance
+      const mm = gsap.matchMedia()
+
+      // ─── MOBILE (≤ 767px) ───────────────────────────────────────────────
+      mm.add('(max-width: 767px)', () => {
+        const cards = gsap.utils.toArray<HTMLElement>('.portfolio-card')
+
+        cards.forEach((card) => {
+          // Lighter entrance — smaller y offset, fires earlier
+          gsap.fromTo(
+            card,
+            { y: 30, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top 92%',
+                end: 'top 70%',
+                toggleActions: 'play none none none',
+              },
+            }
+          )
+
+          // Stair reveal — faster stagger, earlier trigger
+          const stairSteps = card.querySelectorAll('.portfolio-stair-step')
+          if (stairSteps.length) {
+            gsap.to(stairSteps, {
+              scaleY: 0,
+              stagger: 0.06,
+              duration: 0.9,
+              ease: 'power4.inOut',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top 90%',
+              },
+            })
+          }
+
+          // No parallax on mobile — too janky on low-end devices
+        })
+
+        // Grid lines scoped to this section only
         gsap.fromTo(
-          card,
-          { y: 60, opacity: 0 },
+          sectionRef.current!.querySelectorAll('.grid-line-v'),
+          { scaleY: 0 },
           {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power3.out',
+            scaleY: 1,
+            duration: 1.2,
+            ease: 'power3.inOut',
+            stagger: 0.08,
             scrollTrigger: {
-              trigger: card,
-              start: 'top 85%',
-              end: 'top 60%',
-              toggleActions: 'play none none reverse',
+              trigger: sectionRef.current,
+              start: 'top 90%',
+            },
+          }
+        )
+      })
+
+      // ─── DESKTOP (≥ 768px) ──────────────────────────────────────────────
+      mm.add('(min-width: 768px)', () => {
+        const cards = gsap.utils.toArray<HTMLElement>('.portfolio-card')
+
+        cards.forEach((card) => {
+          // Card entrance
+          gsap.fromTo(
+            card,
+            { y: 60, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 1,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top 85%',
+                end: 'top 60%',
+                toggleActions: 'play none none reverse',
+              },
+            }
+          )
+
+          // Stair cut reveal
+          const stairSteps = card.querySelectorAll('.portfolio-stair-step')
+          if (stairSteps.length) {
+            gsap.to(stairSteps, {
+              scaleY: 0,
+              stagger: 0.08,
+              duration: 1.2,
+              ease: 'power4.inOut',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top 75%',
+              },
+            })
+          }
+
+          // Subtle parallax on inner image — desktop only
+          const img = card.querySelector('.portfolio-img')
+          if (img) {
+            gsap.fromTo(
+              img,
+              { y: -15, scale: 1.08 },
+              {
+                y: 15,
+                scale: 1,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  scrub: 1.5,
+                },
+              }
+            )
+          }
+        })
+
+        // Vertical grid lines scoped to this section
+        gsap.fromTo(
+          sectionRef.current!.querySelectorAll('.grid-line-v'),
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            duration: 1.5,
+            ease: 'power3.inOut',
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 80%',
             },
           }
         )
 
-        // Stair cut reveal for the image
-        const stairSteps = card.querySelectorAll('.portfolio-stair-step')
-        if (stairSteps.length) {
-          gsap.to(stairSteps, {
-            scaleY: 0,
-            stagger: 0.08,
+        // Horizontal grid lines scoped to this section
+        gsap.fromTo(
+          sectionRef.current!.querySelectorAll('.grid-line-h'),
+          { scaleX: 0 },
+          {
+            scaleX: 1,
             duration: 1.2,
-            ease: 'power4.inOut',
+            ease: 'power3.inOut',
+            stagger: 0.2,
             scrollTrigger: {
-              trigger: card,
-              start: 'top 75%',
+              trigger: sectionRef.current,
+              start: 'top 80%',
             },
-          })
-        }
-
-        // Parallax on inner image
-        const img = card.querySelector('.portfolio-img')
-        if (img) {
-          gsap.fromTo(
-            img,
-            { y: -20, scale: 1.1 },
-            {
-              y: 20,
-              scale: 1,
-              scrollTrigger: {
-                trigger: card,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 1,
-              },
-            }
-          )
-        }
+          }
+        )
       })
-
-      // Vertical grid lines draw animation (bottom to top)
-      gsap.fromTo(
-        '.grid-line-v',
-        { scaleY: 0 },
-        {
-          scaleY: 1,
-          duration: 1.5,
-          ease: 'power3.inOut',
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-          },
-        }
-      )
-
-      // Horizontal grid lines draw animation (left to right)
-      gsap.fromTo(
-        '.grid-line-h',
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          duration: 1.2,
-          ease: 'power3.inOut',
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-          },
-        }
-      )
     }, sectionRef)
 
     return () => ctx.revert()

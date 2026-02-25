@@ -70,7 +70,7 @@ export default function Navbar() {
             {/* Logo — left */}
             <a href="#" className="flex items-center gap-0 group shrink-0">
               <span className="text-white/90 text-sm font-normal tracking-tight">
-                Flair
+                Parash.dev
               </span>
               <span className="text-white/40 text-sm font-light mx-1.5">
                 —

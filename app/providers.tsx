@@ -18,6 +18,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
       gestureOrientation: 'vertical',
       smoothWheel: true,
       touchMultiplier: 2,
+      autoRaf: false,
     })
 
     lenisRef.current = lenis
@@ -25,16 +26,16 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
     // Sync Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update)
 
-    gsap.ticker.add((time) => {
+    function raf(time: number) {
       lenis.raf(time * 1000)
-    })
+    }
+
+    gsap.ticker.add(raf)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
       lenis.destroy()
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000)
-      })
+      gsap.ticker.remove(raf)
     }
   }, [])
 
