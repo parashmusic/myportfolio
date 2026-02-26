@@ -272,29 +272,66 @@ export default function PortfolioSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.3, type: 'spring', stiffness: 200, damping: 15 }}
           >
-            <Link
-              href="/work"
-              className="relative inline-flex items-center justify-center w-12 h-12 rounded-full border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all duration-300 group/btn"
-              aria-label="View more work"
-            >
-              {/* Plus icon */}
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                className="text-white/60 group-hover/btn:text-white group-hover/btn:rotate-90 transition-all duration-500"
+        {/* View More Button */}
+        <div className="flex justify-center py-10 md:py-14">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, type: 'spring', stiffness: 200, damping: 15 }}
+          >
+            <Link href="/work" aria-label="View more work" className="block">
+              <motion.div
+                initial="initial"
+                whileHover="hover"
+                className="relative flex items-center justify-center h-12 rounded-full border border-white/20 bg-transparent cursor-pointer overflow-hidden"
+                variants={{
+                  initial: { width: '3rem' },
+                  hover: { 
+                    width: '9rem', 
+                    backgroundColor: '#ffffff',
+                    borderColor: '#ffffff'
+                  }
+                }}
+                transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
               >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
+                {/* Plus icon — centered and visible initially */}
+                <motion.div
+                  className="absolute flex items-center justify-center"
+                  variants={{
+                    initial: { opacity: 1, scale: 1 },
+                    hover: { opacity: 0, scale: 0.5 }
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    className="text-white"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </motion.div>
 
-              {/* "View More" tooltip */}
-              <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-white/50 font-light opacity-0 group-hover/btn:opacity-100 translate-y-1 group-hover/btn:translate-y-0 transition-all duration-300 pointer-events-none">
-                View More
-              </span>
+                {/* "View More" text — appears only on hover */}
+                <motion.span
+                  className="absolute whitespace-nowrap text-[#0a0a0a] text-sm font-medium tracking-tight"
+                  variants={{
+                    initial: { opacity: 0, y: 10, filter: 'blur(4px)' },
+                    hover: { opacity: 1, y: 0, filter: 'blur(0px)' }
+                  }}
+                  transition={{ delay: 0.1, duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                >
+                  View More
+                </motion.span>
+              </motion.div>
             </Link>
+          </motion.div>
+        </div>
           </motion.div>
         </div>
       </div>
