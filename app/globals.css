@@ -122,11 +122,17 @@
     @apply border-border outline-ring/50;
   }
 
-  html,
-  body {
+  html {
     height: 100%;
-    /* Allow Lenis to own the one true scroll container */
-    overflow: hidden;
+    overflow-x: hidden;
+    @apply bg-background text-foreground;
+  }
+
+  body {
+    min-height: 100%;
+    overflow-x: hidden;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
     @apply bg-background text-foreground;
   }
 }
