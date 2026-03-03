@@ -268,7 +268,7 @@ export default function WorkPage() {
             </Link>
           </div>
         </div>
-        <div className="w-full h-px bg-white/[0.08]" />
+        <div className="w-full h-px bg-white/[0.58]" />
       </motion.nav>
 
       {/* Hero Section */}
@@ -304,7 +304,7 @@ export default function WorkPage() {
 
         {/* Separator */}
         <div className="px-5 md:px-8">
-          <div className="work-grid-line-h h-px bg-white/[0.08] origin-left" />
+          <div className="work-grid-line-h h-px bg-white/[0.58] origin-left" />
         </div>
       </section>
 
@@ -337,7 +337,7 @@ export default function WorkPage() {
 
         {/* Separator */}
         <div className="px-5 md:px-8">
-          <div className="work-grid-line-h h-px bg-white/[0.08] origin-left" />
+          <div className="work-grid-line-h h-px bg-white/[0.58] origin-left" />
         </div>
       </section>
 
@@ -409,7 +409,7 @@ export default function WorkPage() {
 
         {/* Separator */}
         <div className="px-5 md:px-8">
-          <div className="work-grid-line-h h-px bg-white/[0.08] origin-left" />
+          <div className="work-grid-line-h h-px bg-white/[0.58] origin-left" />
         </div>
       </section>
 
@@ -435,13 +435,13 @@ export default function WorkPage() {
               Chasing success?
             </h2>
             <div className="px-5 md:px-0">
-              <div className="work-grid-line-h h-px bg-white/[0.08] origin-left my-3 md:my-4" />
+              <div className="work-grid-line-h h-px bg-white/[0.58] origin-left my-3 md:my-4" />
             </div>
             <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-light leading-[1.1] tracking-[-0.03em] text-white mb-1">
               Let&apos;s get there.
             </h2>
             <div className="px-5 md:px-0">
-              <div className="work-grid-line-h h-px bg-white/[0.08] origin-left my-3 md:my-4" />
+              <div className="work-grid-line-h h-px bg-white/[0.58] origin-left my-3 md:my-4" />
             </div>
             <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.03em]">
               <em className="italic bg-gradient-to-r from-[#4ade80] to-[#22d3ee] bg-clip-text text-transparent">
@@ -478,7 +478,7 @@ export default function WorkPage() {
 
         {/* Separator */}
         <div className="px-5 md:px-8">
-          <div className="work-grid-line-h h-px bg-white/[0.08] origin-left" />
+          <div className="work-grid-line-h h-px bg-white/[0.58] origin-left" />
         </div>
       </section>
 

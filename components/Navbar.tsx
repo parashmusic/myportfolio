@@ -65,7 +65,7 @@ export default function Navbar() {
             : 'bg-[#0a0a0a]'
         }`}
       >
-        <div className="w-full px-5 md:px-8">
+        <div className="w-full px-5  md:px-8">
           <div className="flex items-center justify-between h-12 md:h-14">
             {/* Logo — left */}
             <a href="#" className="flex items-center gap-0 group shrink-0">
@@ -127,7 +127,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar bottom separator line */}
-        <div className="w-full h-px bg-white/[0.08]" />
+        <div className="w-full h-px bg-white/[0.28]" />
 
         {/* Mobile Menu */}
         <AnimatePresence>
