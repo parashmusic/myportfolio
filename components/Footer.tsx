@@ -159,7 +159,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <span className="text-white/25 text-xs font-light block mb-0.5">Location</span>
-                <span className="text-white/50 text-sm font-light">Patiala, IN</span>
+                <span className="text-white/50 text-sm font-light">Guwahati, IN</span>
               </li>
               <li>
                 <span className="text-white/25 text-xs font-light block mb-0.5">Phone</span>
