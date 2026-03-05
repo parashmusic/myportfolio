@@ -76,7 +76,7 @@ export default function Navbar() {
                 —
               </span>
               <span className="text-white/40 text-sm font-light">
-                Digital Agency
+                Design • Code • Experience
               </span>
             </a>
 
@@ -127,7 +127,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar bottom separator line */}
-        <div className="w-full h-px bg-white/[0.28]" />
+        <div className="w-full h-px bg-white/[0.08]" />
 
         {/* Mobile Menu */}
         <AnimatePresence>

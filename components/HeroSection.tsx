@@ -14,7 +14,7 @@ const SKILLS = [
                 "Django",
                 "Express Js",
                 "React Native",
-                "AWS CloudFront",
+                "AWS",
                 "C & C++",
                 "PHP",
                 "ORACLE PL/SQL",
@@ -97,10 +97,16 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {/* 4 vertical columns */}
         <div className="h-full max-w-none mx-5 md:mx-8 flex">
-          <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
+          <div className="grid-line-v flex-1  border-white/[0.06] origin-bottom" />
           <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
           <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
           <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
+                    <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
+
+          <div className="grid-line-v flex-1 border-l border-white/[0.06]  origin-bottom" />
+
         </div>
       </div>
 
@@ -117,11 +123,14 @@ export default function HeroSection() {
                 delay: 0.3,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[clamp(2.2rem,6.5vw,5rem)] font-light leading-[1.08] tracking-[-0.03em] text-white"
+              className="text-[clamp(2.2rem,6.5vw,6rem)] font-light leading-[1.38] tracking-[-0.03em] text-white"
             >
-              Transforming Visions into
+             Crafting Seamless Digital Experiences
+
+
             </motion.h1>
           </div>
+            <div className="grid-line-h w-full h-px bg-white/[0.58] origin-left" />
           <div className="overflow-hidden">
             <motion.h1
               initial={{ y: 100, opacity: 0 }}
@@ -131,12 +140,12 @@ export default function HeroSection() {
                 delay: 0.45,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[clamp(2.2rem,6.5vw,5rem)] font-light leading-[1.08] tracking-[-0.03em] text-white"
+              className="text-[clamp(2.2rem,6.5vw,6rem)] font-light leading-[1.38] tracking-[-0.03em] text-white"
             >
-              Flawless User Experiences
+             That <span className="text-[#ff3708] italic">Breathe</span> and Evolve
             </motion.h1>
           </div>
-
+                <div className="grid-line-h w-full h-px bg-white/[0.58] origin-left" />
           {/* Skill transition subtitle */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -174,7 +183,7 @@ export default function HeroSection() {
         </div>
 
         {/* Separator line below headline */}
-        <div className="grid-line-h h-px bg-white/[0.08] origin-left" />
+        {/* <div className="grid-line-h h-px bg-white/[0.28] origin-left" /> */}
 
         {/* 3x3 Showcase Image Grid */}
         <div className="py-6 md:py-8">
@@ -433,7 +442,7 @@ export default function HeroSection() {
         </div>
 
         {/* Separator line below showcase grid */}
-        <div className="grid-line-h h-px bg-white/[0.08] origin-left" />
+        <div className="grid-line-h h-px bg-white/[0.28] origin-left" />
       </div>
     </section>
   )
