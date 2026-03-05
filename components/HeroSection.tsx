@@ -203,10 +203,10 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80"
+                  src="/hero/Scene 41.png"
                   alt="Dark tech abstract"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -218,15 +218,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.35 }}
                 style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 60%)' }}
               />
-              {/* Badge */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex items-center gap-2">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white/70">
-                    <path d="M12 2L15 8.5L22 9.5L17 14.5L18 21.5L12 18L6 21.5L7 14.5L2 9.5L9 8.5L12 2Z" stroke="currentColor" strokeWidth="1.5"/>
-                  </svg>
-                  <span className="text-white/80 text-sm font-light tracking-wide">lossless</span>
-                </div>
-              </div>
+              
             </motion.div>
 
             {/* Card 2 */}
@@ -242,11 +234,11 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.06 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
-                <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                <img 
+                  src="https://codebyparash.vercel.app/assets/rmchome-BlUD0lpa.png"
                   alt="Dashboard mockup"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -273,10 +265,10 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80"
+                  src="https://codebyparash.vercel.app/assets/rmc-08agVScG.png"
                   alt="Color palette design"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -297,10 +289,10 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80"
+                  src="https://codebyparash.vercel.app/assets/tracerx-Cyv7dVJV.png"
                   alt="UI screenshots grid"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -321,25 +313,14 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80"
+                  src="/hero/bill.png"
                   alt="Video showcase"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.72)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  whileHover={{ scale: 1.12 }}
-                  whileTap={{ scale: 0.94 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="ml-0.5 text-white">
-                    <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
-                  </svg>
-                </motion.div>
-              </div>
+             
             </motion.div>
 
             {/* Card 6 */}
@@ -357,10 +338,10 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80"
+                  src="/hero/009.png"
                   alt="Product design"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -381,10 +362,10 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80"
+                  src="/hero/cleovv.png"
                   alt="Laptop mockup"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -408,7 +389,7 @@ export default function HeroSection() {
                   src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
                   alt="Mobile design"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
@@ -432,7 +413,7 @@ export default function HeroSection() {
                   src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
                   alt="Phone in hand"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'brightness(0.82)' }}
+                  
                   loading="lazy"
                 />
               </motion.div>
