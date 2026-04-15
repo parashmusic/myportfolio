@@ -10,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
-    title: 'Trientra 🛡️',
+    title: 'Trientra',
     subtitle: 'Safety & Intelligence Platform',
     category: 'App Development',
-    image: '/hero/group4.png',
+    image: '/trin.png',
     titleColor: 'text-[#4ade80]',
   },
   {
