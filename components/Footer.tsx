@@ -169,8 +169,8 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-white/25 text-xs font-light block mb-0.5">Email</span>
-                <a href="mailto:hello@flair.agency" className="text-white/50 text-sm font-light hover:text-white/70 transition-colors">
-                  hello@flair.agency
+                <a href="mailto:hello@Parash.agency" className="text-white/50 text-sm font-light hover:text-white/70 transition-colors">
+                  hello@Parash.agency
                 </a>
               </li>
             </ul>
@@ -180,7 +180,7 @@ export default function Footer() {
         {/* Separator */}
         <div className="grid-line-h h-px bg-white/[0.06] origin-left" />
 
-        {/* Large "Flair" brand text */}
+        {/* Large "Parash" brand text */}
         <div className="footer-brand py-6 md:py-10 overflow-hidden">
           <div className="flex items-end justify-between">
             <h2 className="text-[clamp(4rem,18vw,14rem)] font-light leading-[0.85] tracking-[-0.04em] text-white select-none">
@@ -204,7 +204,7 @@ export default function Footer() {
         <div className="grid-line-h h-px bg-white/[0.06] origin-left" />
         <div className="flex flex-col md:flex-row items-center justify-between py-5">
           <p className="text-white/30 text-xs font-light">
-            © Flair 2025
+            © Parash 2025
           </p>
           <p className="text-white/30 text-xs font-light mt-1 md:mt-0">
             Built with passion and precision.

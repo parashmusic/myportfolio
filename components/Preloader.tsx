@@ -40,7 +40,7 @@ export default function Preloader() {
             className="mb-12"
           >
             <span className="text-white text-3xl font-light tracking-tight">
-              Flair<span className="text-[#4ade80]">.</span>
+              Parash<span className="text-[#4ade80]">.</span>
             </span>
           </motion.div>
 

@@ -9,73 +9,176 @@ import Footer from '@/components/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const categories = ['All', 'Branding', 'Products', 'Web'] as const
+const categories = ['All', 'App Development', 'AI/ML', 'web development ', 'Utilities'] as const
 type Category = (typeof categories)[number]
 
 const allProjects = [
+  // App Development
   {
-    title: 'TG Lab',
-    subtitle: 'iGaming software providers',
-    category: 'Web',
-    tag: 'Web Design & Development',
-    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80',
-    titleColor: 'text-white',
-  },
-  {
-    title: 'NordPass',
-    subtitle: 'Reliable password manager solution',
-    category: 'Branding',
-    tag: 'Branding',
-    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=900&q=80',
-    titleColor: 'text-[#e85d4a]',
-  },
-  {
-    title: 'FastTrack',
-    subtitle: 'Modern educational platform',
-    category: 'Web',
-    tag: 'Web Design & Development',
-    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80',
-    titleColor: 'text-white',
-  },
-  {
-    title: 'Fivrec',
-    subtitle: 'Sustainability driven company',
-    category: 'Branding',
-    tag: 'Branding + Web Design & Development',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80',
-    titleColor: 'text-white',
-  },
-  {
-    title: 'Zenith',
-    subtitle: 'Premium lifestyle brand',
-    category: 'Products',
-    tag: 'Product Design',
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900&q=80',
-    titleColor: 'text-[#a78bfa]',
-  },
-  {
-    title: 'Pulse',
-    subtitle: 'Health & fitness platform',
-    category: 'Web',
-    tag: 'Web Design & Development',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80',
+    title: 'Trientra 🛡️',
+    subtitle: 'Safety & Intelligence Platform',
+    category: 'App Development',
+    tag: 'Safety & Intelligence',
+    image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=900&q=80',
     titleColor: 'text-[#4ade80]',
   },
   {
-    title: 'Artisan',
-    subtitle: 'Handcrafted goods marketplace',
-    category: 'Products',
-    tag: 'Product Design',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=80',
+    title: 'AeroSync',
+    subtitle: 'Decentralized P2P messaging',
+    category: 'App Development',
+    tag: 'P2P Networking',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80',
     titleColor: 'text-white',
   },
   {
-    title: 'Horizon',
-    subtitle: 'Travel experience platform',
-    category: 'Branding',
-    tag: 'Branding + Web Design',
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=900&q=80',
-    titleColor: 'text-[#f59e0b]',
+    title: 'tracerX',
+    subtitle: 'Finance & project management',
+    category: 'App Development',
+    tag: 'Product Management',
+    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'Piggy_Buddy',
+    subtitle: 'Livestock management app',
+    category: 'App Development',
+    tag: 'AgriTech',
+    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=900&q=80',
+    titleColor: 'text-[#fbbf24]',
+  },
+
+  // AI/ML
+  {
+    title: 'Jalbhoomi-Raksha',
+    subtitle: 'Cloud-based Flood Detection',
+    category: 'AI/ML',
+    tag: 'AI/ML + Computer Vision',
+    image: 'https://images.unsplash.com/photo-1527430295725-ddbc36d72190?w=900&q=80',
+    titleColor: 'text-[#3b82f6]',
+  },
+  {
+    title: 'Cutie_ai',
+    subtitle: 'Agentic local AI assistant',
+    category: 'AI/ML',
+    tag: 'AI/ML + LLM',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80',
+    titleColor: 'text-[#a78bfa]',
+  },
+  {
+    title: 'Juno-CLI',
+    subtitle: 'AI-powered CLI agent',
+    category: 'AI/ML',
+    tag: 'AI/ML + CLI',
+    image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'Emotion_detection',
+    subtitle: 'Real-time DL emotion classifier',
+    category: 'AI/ML',
+    tag: 'AI/ML + Deep Learning',
+    image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=900&q=80',
+    titleColor: 'text-[#f43f5e]',
+  },
+  {
+    title: 'Amazon-ML-2025',
+    subtitle: 'Amazon ML Challenge Project',
+    category: 'AI/ML',
+    tag: 'Machine Learning',
+    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=900&q=80',
+    titleColor: 'text-white',
+  },
+
+  // web development 
+  {
+    title: 'Yantraksh',
+    subtitle: 'Official techfest platform',
+    category: 'web development ',
+    tag: 'Full Stack',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'barakedge',
+    subtitle: 'Modern News & Media platform',
+    category: 'web development ',
+    tag: 'Media & News',
+    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=80',
+    titleColor: 'text-[#e85d4a]',
+  },
+  {
+    title: 'wave flow',
+    subtitle: 'Music subscription platform',
+    category: 'web development ',
+    tag: 'SaaS',
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&q=80',
+    titleColor: 'text-[#4ade80]',
+  },
+  {
+    title: 'Cleoville',
+    subtitle: 'Gifting e-commerce platform',
+    category: 'web development ',
+    tag: 'E-commerce',
+    image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'nexz-frontend',
+    subtitle: 'Premium fintech dashboard',
+    category: 'web development ',
+    tag: 'Fintech',
+    image: 'https://images.unsplash.com/photo-1551288049-bbbda536639a?w=900&q=80',
+    titleColor: 'text-[#2dd4bf]',
+  },
+  {
+    title: 'codebyparash',
+    subtitle: 'Personal portfolio ecosystem',
+    category: 'web development ',
+    tag: 'Portfolio',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'Lata_Sarees',
+    subtitle: 'Textile e-commerce platform',
+    category: 'web development ',
+    tag: 'E-commerce',
+    image: 'https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'rmc-front',
+    subtitle: 'Music management application',
+    category: 'web development ',
+    tag: 'Full Stack',
+    image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=900&q=80',
+    titleColor: 'text-white',
+  },
+  {
+    title: 'Parashmusic_Catalog',
+    subtitle: 'Music catalog system',
+    category: 'web development ',
+    tag: 'Music Tech',
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=900&q=80',
+    titleColor: 'text-white',
+  },
+
+  // UTILITIES
+  {
+    title: 'Spotify_Code_Gen',
+    subtitle: 'Scannable code generator',
+    category: 'Utilities',
+    tag: 'API & OAuth',
+    image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=900&q=80',
+    titleColor: 'text-[#1db954]',
+  },
+  {
+    title: 'spotify_API_manager',
+    subtitle: 'Token automation solution',
+    category: 'Utilities',
+    tag: 'Automation',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80',
+    titleColor: 'text-white',
   },
 ]
 
@@ -356,18 +459,31 @@ export default function WorkPage() {
         <div ref={gridRef} className="relative z-10 px-5 md:px-8">
             <div
               key={activeCategory}
-              className="grid grid-cols-1 md:grid-cols-2 gap-0"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
             >
               {filteredProjects.map((project, index) => {
-                const isRight = index % 2 === 1
+                const isSecondMd = index % 2 === 1
+                const colLg = index % 3 // 0, 1, 2
+                
                 return (
                   <div
                     key={project.title}
-                    className={`work-project-card group cursor-pointer ${
-                      isRight
-                        ? 'md:pl-4 md:border-l md:border-white/[0.06]'
-                        : 'md:pr-4'
-                    } ${index > 1 ? 'md:pt-0' : ''}`}
+                    className={`work-project-card group cursor-pointer transition-all duration-500 ${
+                      // Mobile (1 col)
+                      'px-0 border-white/[0.06]'
+                    } ${
+                      // Tablet (2 col)
+                      isSecondMd 
+                        ? 'md:pl-6 md:border-l md:border-white/[0.06]' 
+                        : 'md:pr-6 md:border-l-0'
+                    } ${
+                      // Desktop (3 col)
+                      colLg === 0 
+                        ? 'lg:pr-8 lg:pl-0 lg:border-l-0' 
+                        : colLg === 1 
+                        ? 'lg:px-8 lg:border-l lg:border-white/[0.06]' 
+                        : 'lg:pl-8 lg:border-l lg:border-white/[0.06]'
+                    } ${index > 2 ? 'lg:pt-0' : ''}`}
                   >
                     {/* Image container */}
                     <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#111]">

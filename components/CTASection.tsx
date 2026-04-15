@@ -97,7 +97,7 @@ export default function CTASection() {
             </h2>
             <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.03em] mb-10">
               <em className="italic bg-gradient-to-r from-[#4ade80] to-[#22d3ee] bg-clip-text text-transparent">
-                With Flair.
+                With Parash.
               </em>
             </h2>
           </motion.div>
@@ -109,7 +109,7 @@ export default function CTASection() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <motion.a
-              href="mailto:hello@flair.agency"
+              href="mailto:hello@Parash.agency"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#0a0a0a] rounded-full text-sm font-medium tracking-wide hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] transition-shadow duration-500"
