@@ -8,8 +8,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Parash.dev - Digital Agency',
-  description: 'We build brands & digital products for lasting success',
+  title: 'Parash.dev - Portfolio',
+  description: 'I craft seamless digital experiences that breathe and evolve',
   icons: {
     icon: [
       {

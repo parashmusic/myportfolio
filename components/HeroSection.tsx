@@ -186,7 +186,7 @@ export default function HeroSection() {
         {/* <div className="grid-line-h h-px bg-white/[0.28] origin-left" /> */}
 
         {/* 3x3 Showcase Image Grid */}
-        <div className="py-6 md:py-8">
+        <div className="py-6  md:py-8">
           <div className="grid grid-cols-3 gap-2 md:gap-3">
 
             {/* Card 1 — with badge */}
@@ -386,9 +386,9 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
+                  src="/hero/Group4.png"
                   alt="Mobile design"
-                  className="w-full h-full object-cover"
+                  className="w-full scale-110 h-full object-cover"
                   
                   loading="lazy"
                 />
@@ -410,7 +410,7 @@ export default function HeroSection() {
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
+                  src="/hero/Group9.png"
                   alt="Phone in hand"
                   className="w-full h-full object-cover"
                   
