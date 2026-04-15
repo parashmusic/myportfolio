@@ -15,16 +15,16 @@ const footerLinks = {
     { label: 'About', href: '#about' },
   ],
   services: [
-    { label: 'Branding', href: '#services' },
+    { label: 'App Development', href: '#services' },
     { label: 'UX/UI Design', href: '#services' },
     { label: 'Development', href: '#services' },
     { label: 'Creative', href: '#services' },
   ],
   social: [
-    { label: 'X (Twitter)', href: '#' },
-    { label: 'Dribbble', href: '#' },
-    { label: 'LinkedIn', href: '#' },
-    { label: 'Instagram', href: '#' },
+    { label: 'X (Twitter)', href: 'https://x.com/parashmusic' },
+    { label: 'Github', href: 'https://github.com/parashmusic' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/parashmonidas' },
+    { label: 'Instagram', href: 'https://www.instagram.com/parash.wav/' },
   ],
 }
 
@@ -161,16 +161,11 @@ export default function Footer() {
                 <span className="text-white/25 text-xs font-light block mb-0.5">Location</span>
                 <span className="text-white/50 text-sm font-light">Guwahati, IN</span>
               </li>
-              <li>
-                <span className="text-white/25 text-xs font-light block mb-0.5">Phone</span>
-                <a href="tel:+917814012345" className="text-white/50 text-sm font-light hover:text-white/70 transition-colors">
-                  +91 78140 12345
-                </a>
-              </li>
+             
               <li>
                 <span className="text-white/25 text-xs font-light block mb-0.5">Email</span>
-                <a href="mailto:hello@Parash.agency" className="text-white/50 text-sm font-light hover:text-white/70 transition-colors">
-                  hello@Parash.agency
+                <a href="mailto:parashmoni.info@gmail.com" className="text-white/50 text-sm font-light hover:text-white/70 transition-colors">
+                  parashmoni.info@gmail.com
                 </a>
               </li>
             </ul>

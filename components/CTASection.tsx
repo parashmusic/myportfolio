@@ -90,7 +90,7 @@ export default function CTASection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-light leading-[1.1] tracking-[-0.03em] text-white mb-1">
-              Chasing success?
+             Want to build Something Better, Smarter?
             </h2>
             <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-light leading-[1.1] tracking-[-0.03em] text-white mb-1">
               Let&apos;s get there.
@@ -109,7 +109,7 @@ export default function CTASection() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <motion.a
-              href="mailto:hello@Parash.agency"
+              href="mailto:parashmoni.info@gmail.com" 
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#0a0a0a] rounded-full text-sm font-medium tracking-wide hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] transition-shadow duration-500"

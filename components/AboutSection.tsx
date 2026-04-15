@@ -84,7 +84,7 @@ export default function AboutSection() {
     return () => ctx.revert()
   }, [])
 
-  const aboutText = 'We are passionate and creative strategists. Each adding distinctive touch to every venture.'
+  const aboutText = 'i am a passionate and creative developer. Adding distinctive touch to every venture.'
   const words = aboutText.split(' ')
 
   return (
@@ -141,7 +141,7 @@ export default function AboutSection() {
               className="about-image rounded-lg overflow-hidden aspect-[3/4]"
             >
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
+                src="/parash.jpeg"
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -155,7 +155,7 @@ export default function AboutSection() {
               className="about-image rounded-lg overflow-hidden aspect-[3/4] mt-8"
             >
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
+                src="/me2.jpg"
                 alt="Team working"
                 className="w-full h-full object-cover"
                 loading="lazy"

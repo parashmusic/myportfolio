@@ -9,18 +9,36 @@ gsap.registerPlugin(ScrollTrigger)
 
 const services = [
   {
-    title: 'Branding',
+    title: 'App Development',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
         <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
       </svg>
     ),
     items: [
-      'Brand Strategy,',
-      'Positioning,',
-      'Character Development,',
-      'Identity Design,',
-      'Brand Guidelines',
+      'Native iOS & Android,',
+      'Cross-platform (React Native),',
+      'App Architecture,',
+      'Store Optimization,',
+      'Performance Tuning',
+    ],
+  },
+    {
+    title: 'Web Solutions',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+        <path d="M4 6H20" />
+        <path d="M4 10H20" />
+        <path d="M4 14H20" />
+        <path d="M4 18H20" />
+      </svg>
+    ),
+    items: [
+      'Website Development,',
+      'CMS Implementation,',
+      'Front-end Development,',
+      'Quality Assurance,',
+      'Maintenance & Support',
     ],
   },
   {
@@ -59,24 +77,7 @@ const services = [
       'NFT Development',
     ],
   },
-  {
-    title: 'Development',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M4 6H20" />
-        <path d="M4 10H20" />
-        <path d="M4 14H20" />
-        <path d="M4 18H20" />
-      </svg>
-    ),
-    items: [
-      'Website Development,',
-      'CMS Implementation,',
-      'Front-end Development,',
-      'Quality Assurance,',
-      'Maintenance & Support',
-    ],
-  },
+
 ]
 
 export default function ServicesSection() {

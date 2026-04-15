@@ -548,7 +548,7 @@ export default function WorkPage() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-light leading-[1.1] tracking-[-0.03em] text-white mb-1">
-              Chasing success?
+              Want to build Something Better, Smarter?
             </h2>
             <div className="px-5 md:px-0">
               <div className="work-grid-line-h h-px bg-white/[0.58] origin-left my-3 md:my-4" />

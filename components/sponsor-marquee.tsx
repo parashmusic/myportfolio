@@ -8,11 +8,11 @@ gsap.registerPlugin(ScrollTrigger)
 
 // Example sponsor data - replace with actual sponsors
 const SPONSORS = [
-  { name: "Renault", logo: "/sponsors/renault.svg" },
-  { name: "Oppo", logo: "/sponsors/oppo (1).svg" },
-  { name: "White Label Recharge", logo: "/sponsors/image.webp" },
-  { name: "Ola Cabs", logo: "/sponsors/Ola_Cabs_logo.svg.png" },
-  { name: "Prag News", logo: "/sponsors/prag1.png" },
+  { name: "Regional Music Centre", logo: "/sponsors/renault.svg" },
+  { name: "Barak Edge", logo: "/sponsors/oppo (1).svg" },
+  { name: "Yantraksh 2026", logo: "/sponsors/image.webp" },
+  { name: "Get a Ride", logo: "/sponsors/Ola_Cabs_logo.svg.png" },
+  { name: "Nexz Fintech", logo: "/sponsors/prag1.png" },
 ]
 
 export function SponsorMarquee() {
