@@ -19,7 +19,7 @@ const allProjects = [
     subtitle: 'Safety & Intelligence Platform',
     category: 'App Development',
     tag: 'Safety & Intelligence',
-    image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=900&q=80',
+    image: '/hero/Group4.png',
     titleColor: 'text-[#4ade80]',
   },
   {
@@ -27,7 +27,7 @@ const allProjects = [
     subtitle: 'Decentralized P2P messaging',
     category: 'App Development',
     tag: 'P2P Networking',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80',
+    image: '/aerosync.png',
     titleColor: 'text-white',
   },
   {
@@ -35,7 +35,7 @@ const allProjects = [
     subtitle: 'Finance & project management',
     category: 'App Development',
     tag: 'Product Management',
-    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=80',
+    image: '/hero/009.png',
     titleColor: 'text-white',
   },
   {
@@ -43,7 +43,7 @@ const allProjects = [
     subtitle: 'Livestock management app',
     category: 'App Development',
     tag: 'AgriTech',
-    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=900&q=80',
+    image: '/Group18.png',
     titleColor: 'text-[#fbbf24]',
   },
 
@@ -53,7 +53,7 @@ const allProjects = [
     subtitle: 'Cloud-based Flood Detection',
     category: 'AI/ML',
     tag: 'AI/ML + Computer Vision',
-    image: 'https://images.unsplash.com/photo-1527430295725-ddbc36d72190?w=900&q=80',
+    image: '/hero/Group9.png',
     titleColor: 'text-[#3b82f6]',
   },
   {
@@ -61,7 +61,7 @@ const allProjects = [
     subtitle: 'Agentic local AI assistant',
     category: 'AI/ML',
     tag: 'AI/ML + LLM',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80',
+    image: '/cute.png',
     titleColor: 'text-[#a78bfa]',
   },
   {
@@ -69,7 +69,7 @@ const allProjects = [
     subtitle: 'AI-powered CLI agent',
     category: 'AI/ML',
     tag: 'AI/ML + CLI',
-    image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&q=80',
+    image: 'https://codebyparash.vercel.app/assets/Scene2-DuVYt_I_.png',
     titleColor: 'text-white',
   },
   {
@@ -85,7 +85,7 @@ const allProjects = [
     subtitle: 'Amazon ML Challenge Project',
     category: 'AI/ML',
     tag: 'Machine Learning',
-    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=900&q=80',
+    image: 'https://thenewviews.com/wp-content/uploads/2025/10/Amazon-ML-Challenge.webp',
     titleColor: 'text-white',
   },
 
@@ -95,7 +95,7 @@ const allProjects = [
     subtitle: 'Official techfest platform',
     category: 'web development ',
     tag: 'Full Stack',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80',
+    image: '/hero/Scene 41.png',
     titleColor: 'text-white',
   },
   {
@@ -103,7 +103,7 @@ const allProjects = [
     subtitle: 'Modern News & Media platform',
     category: 'web development ',
     tag: 'Media & News',
-    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=80',
+    image: '/barak.png',
     titleColor: 'text-[#e85d4a]',
   },
   {
@@ -119,7 +119,7 @@ const allProjects = [
     subtitle: 'Gifting e-commerce platform',
     category: 'web development ',
     tag: 'E-commerce',
-    image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=900&q=80',
+    image: '/hero/cleovv.png',
     titleColor: 'text-white',
   },
   {
@@ -127,7 +127,7 @@ const allProjects = [
     subtitle: 'Premium fintech dashboard',
     category: 'web development ',
     tag: 'Fintech',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda536639a?w=900&q=80',
+    image: 'https://codebyparash.vercel.app/assets/nexz1-CYO7QukP.png',
     titleColor: 'text-[#2dd4bf]',
   },
   {
@@ -147,11 +147,11 @@ const allProjects = [
     titleColor: 'text-white',
   },
   {
-    title: 'rmc-front',
+    title: 'regional Music Centre',
     subtitle: 'Music management application',
     category: 'web development ',
     tag: 'Full Stack',
-    image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=900&q=80',
+    image: 'https://codebyparash.vercel.app/assets/rmchome-BlUD0lpa.png',
     titleColor: 'text-white',
   },
   {
@@ -159,7 +159,7 @@ const allProjects = [
     subtitle: 'Music catalog system',
     category: 'web development ',
     tag: 'Music Tech',
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=900&q=80',
+    image: 'https://codebyparash.vercel.app/assets/parashmusic-C0L7UWrH.png',
     titleColor: 'text-white',
   },
 
