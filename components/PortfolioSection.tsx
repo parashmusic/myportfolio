@@ -15,20 +15,23 @@ const projects = [
     category: 'App Development',
     image: '/trin.png',
     titleColor: 'text-[#4ade80]',
+    link: 'https://trinetrabeta.vercel.app/',
   },
   {
-    title: 'Juno-CLI',
+    title: 'Juno CLI',
     subtitle: 'AI-powered CLI agent',
     category: 'AI/ML',
     image: '/juno.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Juno-CLI',
   },
   {
-    title: 'barakedge',
+    title: 'Barakedge',
     subtitle: 'Modern News & Media platform',
     category: 'Web Development',
     image: '/barak.png',
     titleColor: 'text-[#e85d4a]',
+    link: 'https://barakedge.in/',
   },
   {
     title: 'AeroSync',
@@ -36,6 +39,7 @@ const projects = [
     category: 'App Development',
     image: '/aerosync.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/AeroSync',
   },
 ]
 
@@ -221,10 +225,9 @@ export default function PortfolioSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {projects.map((project, index) => {
             const isRight = index % 2 === 1
-            return (
+            const cardContent = (
               <div
-                key={project.title}
-                className={`portfolio-card group cursor-pointer ${
+                className={`portfolio-card group cursor-pointer h-full transition-all duration-500 ${
                   isRight ? 'md:pl-4 md:border-l md:border-white/[0.06]' : 'md:pr-4'
                 } ${index > 0 ? 'pt-8 md:pt-0' : ''}`}
               >
@@ -261,17 +264,25 @@ export default function PortfolioSection() {
                 </div>
               </div>
             )
+
+            return project.link ? (
+              <a 
+                key={project.title} 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                {cardContent}
+              </a>
+            ) : (
+              <div key={project.title} className="h-full">
+                {cardContent}
+              </div>
+            )
           })}
         </div>
 
-        {/* View More Button */}
-        <div className="flex justify-center py-10 md:py-14">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, type: 'spring', stiffness: 200, damping: 15 }}
-          >
         {/* View More Button */}
         <div className="flex justify-center py-10 md:py-14">
           <motion.div
@@ -284,11 +295,11 @@ export default function PortfolioSection() {
               <motion.div
                 initial="initial"
                 whileHover="hover"
-                className="relative flex items-center justify-center h-12 rounded-full border border-white/20 bg-transparent cursor-pointer overflow-hidden"
+                className="relative flex items-center justify-center h-16 rounded-full border border-white/20 bg-transparent cursor-pointer overflow-hidden"
                 variants={{
-                  initial: { width: '3rem' },
+                  initial: { width: '4rem' },
                   hover: { 
-                    width: '9rem', 
+                    width: '10rem', 
                     backgroundColor: '#ffffff',
                     borderColor: '#ffffff'
                   }
@@ -305,8 +316,8 @@ export default function PortfolioSection() {
                   transition={{ duration: 0.2 }}
                 >
                   <svg
-                    width="16"
-                    height="16"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -330,8 +341,6 @@ export default function PortfolioSection() {
                 </motion.span>
               </motion.div>
             </Link>
-          </motion.div>
-        </div>
           </motion.div>
         </div>
       </div>

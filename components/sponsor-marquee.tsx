@@ -85,6 +85,27 @@ export function SponsorMarquee() {
       </div>
 
       <div className="relative z-10 py-10 px-5 md:px-8">
+        <div className="flex flex-col items-center mb-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center mb-4"
+          >
+            <div className="w-2 h-2 rounded-full bg-white" />
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-white/40 text-sm font-light tracking-[0.2em] uppercase text-center"
+          >
+            Entities I&apos;ve worked with
+          </motion.h2>
+        </div>
+        
         <div className="absolute inset-0 z-10 pointer-events-none" />
     
 

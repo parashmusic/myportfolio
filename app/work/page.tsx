@@ -15,12 +15,13 @@ type Category = (typeof categories)[number]
 const allProjects = [
   // App Development
   {
-    title: 'Trientra 🛡️',
+    title: 'Trientra',
     subtitle: 'Safety & Intelligence Platform',
     category: 'App Development',
     tag: 'Safety & Intelligence',
     image: '/hero/Group4.png',
     titleColor: 'text-[#4ade80]',
+    link: 'https://trinetrabeta.vercel.app/',
   },
   {
     title: 'AeroSync',
@@ -29,6 +30,7 @@ const allProjects = [
     tag: 'P2P Networking',
     image: '/aerosync.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/AeroSync',
   },
   {
     title: 'tracerX',
@@ -37,56 +39,63 @@ const allProjects = [
     tag: 'Product Management',
     image: '/hero/009.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/tracerX',
   },
   {
-    title: 'Piggy_Buddy',
+    title: 'Piggy Buddy',
     subtitle: 'Livestock management app',
     category: 'App Development',
     tag: 'AgriTech',
     image: '/Group18.png',
     titleColor: 'text-[#fbbf24]',
+    link: 'https://github.com/parashmusic/Piggy_Buddy',
   },
 
   // AI/ML
   {
-    title: 'Jalbhoomi-Raksha',
+    title: 'Jalbhoomi Raksha',
     subtitle: 'Cloud-based Flood Detection',
     category: 'AI/ML',
     tag: 'AI/ML + Computer Vision',
     image: '/hero/Group9.png',
     titleColor: 'text-[#3b82f6]',
+    link: 'https://github.com/parashmusic/Jalbhoomi-Raksha',
   },
   {
-    title: 'Cutie_ai',
+    title: 'Cutie AI Buddy',
     subtitle: 'Agentic local AI assistant',
     category: 'AI/ML',
     tag: 'AI/ML + LLM',
     image: '/cute.png',
     titleColor: 'text-[#a78bfa]',
+    link: 'https://github.com/parashmusic/Cutie_ai',
   },
   {
-    title: 'Juno-CLI',
+    title: 'Juno CLI',
     subtitle: 'AI-powered CLI agent',
     category: 'AI/ML',
     tag: 'AI/ML + CLI',
     image: 'https://codebyparash.vercel.app/assets/Scene2-DuVYt_I_.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Juno-CLI',
   },
   {
-    title: 'Emotion_detection',
+    title: 'Emotion Detection',
     subtitle: 'Real-time DL emotion classifier',
     category: 'AI/ML',
     tag: 'AI/ML + Deep Learning',
-    image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=900&q=80',
+    image: 'https://softwebsolutions.b-cdn.net/wp-content/uploads/2023/07/Emotion-recognition.webp',
     titleColor: 'text-[#f43f5e]',
+    link: 'https://github.com/parashmusic/Emotion_detection',
   },
   {
-    title: 'Amazon-ML-2025',
+    title: 'Amazon ML 2025',
     subtitle: 'Amazon ML Challenge Project',
     category: 'AI/ML',
     tag: 'Machine Learning',
     image: 'https://thenewviews.com/wp-content/uploads/2025/10/Amazon-ML-Challenge.webp',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Amazon-ML-2025',
   },
 
   // web development 
@@ -97,22 +106,16 @@ const allProjects = [
     tag: 'Full Stack',
     image: '/hero/Scene 41.png',
     titleColor: 'text-white',
+    link: 'https://www.yantraksh.co.in/',
   },
   {
-    title: 'barakedge',
+    title: 'Barakedge',
     subtitle: 'Modern News & Media platform',
     category: 'web development ',
     tag: 'Media & News',
     image: '/barak.png',
     titleColor: 'text-[#e85d4a]',
-  },
-  {
-    title: 'wave flow',
-    subtitle: 'Music subscription platform',
-    category: 'web development ',
-    tag: 'SaaS',
-    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&q=80',
-    titleColor: 'text-[#4ade80]',
+    link: 'https://barakedge.in/',
   },
   {
     title: 'Cleoville',
@@ -121,64 +124,72 @@ const allProjects = [
     tag: 'E-commerce',
     image: '/hero/cleovv.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Cleoville',
   },
   {
-    title: 'nexz-frontend',
+    title: 'Nexz Fintech',
     subtitle: 'Premium fintech dashboard',
     category: 'web development ',
     tag: 'Fintech',
     image: 'https://codebyparash.vercel.app/assets/nexz1-CYO7QukP.png',
     titleColor: 'text-[#2dd4bf]',
+    link: 'https://github.com/parashmusic/nexz-frontend',
   },
   {
-    title: 'codebyparash',
+    title: 'CodeByParash',
     subtitle: 'Personal portfolio ecosystem',
     category: 'web development ',
     tag: 'Portfolio',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80',
+    image: '/image.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/codebyparash',
   },
   {
-    title: 'Lata_Sarees',
+    title: 'Lata Sarees',
     subtitle: 'Textile e-commerce platform',
     category: 'web development ',
     tag: 'E-commerce',
-    image: 'https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?w=900&q=80',
+    image: 'https://codebyparash.vercel.app/assets/lata-DhZxRwsE.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Lata_Sarees',
   },
   {
-    title: 'regional Music Centre',
+    title: 'Regional Music Centre',
     subtitle: 'Music management application',
     category: 'web development ',
     tag: 'Full Stack',
     image: 'https://codebyparash.vercel.app/assets/rmchome-BlUD0lpa.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/rmc-front',
   },
   {
-    title: 'Parashmusic_Catalog',
+    title: 'Parashmusic Catalog',
     subtitle: 'Music catalog system',
     category: 'web development ',
     tag: 'Music Tech',
     image: 'https://codebyparash.vercel.app/assets/parashmusic-C0L7UWrH.png',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Parashmusic_Catalog',
   },
 
   // UTILITIES
   {
-    title: 'Spotify_Code_Gen',
+    title: 'Spotify Code Gen',
     subtitle: 'Scannable code generator',
     category: 'Utilities',
     tag: 'API & OAuth',
-    image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=900&q=80',
+    image: 'https://raw.githubusercontent.com/parashmusic/Spotify_Code_Generator/refs/heads/master/assets/interface1.png',
     titleColor: 'text-[#1db954]',
+    link: 'https://github.com/parashmusic/Spotify_Code_Generator',
   },
   {
-    title: 'spotify_API_manager',
+    title: 'Spotify API Manager',
     subtitle: 'Token automation solution',
     category: 'Utilities',
     tag: 'Automation',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80',
+    image: 'https://www.tenstickers.in/webp/alfombretaratoli/large/spotify-personalised-mouse-mat-30565.webp',
     titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/spotify_APItoken_generator',
   },
 ]
 
@@ -465,10 +476,9 @@ export default function WorkPage() {
                 const isSecondMd = index % 2 === 1
                 const colLg = index % 3 // 0, 1, 2
                 
-                return (
+                const cardContent = (
                   <div
-                    key={project.title}
-                    className={`work-project-card group cursor-pointer transition-all duration-500 ${
+                    className={`work-project-card group cursor-pointer transition-all duration-500 h-full ${
                       // Mobile (1 col)
                       'px-0 border-white/[0.06]'
                     } ${
@@ -517,6 +527,22 @@ export default function WorkPage() {
                       </h3>
                       <p className="text-white/35 text-xs font-light">{project.tag}</p>
                     </div>
+                  </div>
+                )
+
+                return project.link ? (
+                  <a 
+                    key={project.title} 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                  >
+                    {cardContent}
+                  </a>
+                ) : (
+                  <div key={project.title} className="h-full">
+                    {cardContent}
                   </div>
                 )
               })}
