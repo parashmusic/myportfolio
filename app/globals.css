@@ -125,13 +125,15 @@
   html {
     height: 100%;
     overflow-x: hidden;
+    overscroll-behavior-y: auto;
     @apply bg-background text-foreground;
   }
 
   body {
     min-height: 100%;
     overflow-x: hidden;
-    touch-action: pan-y;
+    touch-action: auto;
+    overscroll-behavior-y: auto;
     -webkit-overflow-scrolling: touch;
     @apply bg-background text-foreground;
   }
