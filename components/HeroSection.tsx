@@ -97,15 +97,15 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {/* 4 vertical columns */}
         <div className="h-full max-w-none mx-5 md:mx-8 flex">
-          <div className="grid-line-v flex-1  border-white/[0.06] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
-                    <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
+          <div className="grid-line-v flex-1  border-white/[0.1] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.1] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.1] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.1] border-r border-r-white/[0.1] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.1] border-r border-r-white/[0.1] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.1] border-r border-r-white/[0.1] origin-bottom" />
+                    <div className="grid-line-v flex-1 border-l border-white/[0.1] border-r border-r-white/[0.1] origin-bottom" />
 
-          <div className="grid-line-v flex-1 border-l border-white/[0.06]  origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.1]  origin-bottom" />
 
         </div>
       </div>
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 delay: 0.3,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[clamp(2.2rem,6.5vw,6rem)] font-light leading-[1.38] tracking-[-0.03em] text-white"
+              className="text-[clamp(2.2rem,6.5vw,5.5rem)] font-light leading-[1.38] tracking-[-0.03em] text-white"
             >
              Crafting Seamless Digital Experiences
 
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 delay: 0.45,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[clamp(2.2rem,6.5vw,6rem)] font-light leading-[1.38] tracking-[-0.03em] text-white"
+              className="text-[clamp(2.2rem,6.5vw,5.5rem)] font-light leading-[1.38] tracking-[-0.03em] text-white"
             >
              That <span className="text-[#ff3708] italic">Breathe</span> and Evolve
             </motion.h1>

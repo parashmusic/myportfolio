@@ -137,6 +137,12 @@
     -webkit-overflow-scrolling: touch;
     @apply bg-background text-foreground;
   }
+
+  @media (min-width: 768px) {
+    body {
+      zoom: 120%;
+    }
+  }
 }
 
 /* Scroll animations */

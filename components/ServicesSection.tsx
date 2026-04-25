@@ -11,9 +11,22 @@ const services = [
   {
     title: 'App Development',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
-      </svg>
+      <motion.svg
+        animate={{ rotate: 360 }}
+        transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+      >
+        <motion.path
+          animate={{ opacity: [0.4, 1, 0.4], scale: [1, 1.1, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+        />
+      </motion.svg>
     ),
     items: [
       'Native iOS & Android,',
@@ -27,10 +40,19 @@ const services = [
     title: 'Web Solutions',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M4 6H20" />
-        <path d="M4 10H20" />
-        <path d="M4 14H20" />
-        <path d="M4 18H20" />
+        {[6, 10, 14, 18].map((y, i) => (
+          <motion.path
+            key={y}
+            d={`M4 ${y}H20`}
+            animate={{ opacity: [0.3, 1, 0.3], x: [0, 1, 0] }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: i * 0.4,
+              ease: 'easeInOut',
+            }}
+          />
+        ))}
       </svg>
     ),
     items: [
@@ -45,10 +67,26 @@ const services = [
     title: 'UX/UI Design',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <rect x="3" y="6" width="3" height="12" />
-        <rect x="8" y="3" width="3" height="18" />
-        <rect x="13" y="8" width="3" height="8" />
-        <rect x="18" y="5" width="3" height="14" />
+        <motion.rect
+          x="3" y="6" width="3" height="12"
+          animate={{ height: [12, 16, 12], y: [6, 4, 6] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.rect
+          x="8" y="3" width="3" height="18"
+          animate={{ height: [18, 14, 18], y: [3, 5, 3] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        />
+        <motion.rect
+          x="13" y="8" width="3" height="8"
+          animate={{ height: [8, 12, 8], y: [8, 6, 8] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        />
+        <motion.rect
+          x="18" y="5" width="3" height="14"
+          animate={{ height: [14, 10, 14], y: [5, 7, 5] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        />
       </svg>
     ),
     items: [
@@ -63,8 +101,16 @@ const services = [
     title: 'Creative Design',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M12 3C12 3 14 8 14 12C14 16 12 21 12 21" />
-        <path d="M12 3C12 3 10 8 10 12C10 16 12 21 12 21" />
+        <motion.path
+          d="M12 3C12 3 14 8 14 12C14 16 12 21 12 21"
+          animate={{ opacity: [0.3, 1, 0.3] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.path
+          d="M12 3C12 3 10 8 10 12C10 16 12 21 12 21"
+          animate={{ opacity: [0.3, 1, 0.3] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+        />
         <path d="M3 12H21" />
         <circle cx="12" cy="12" r="9" />
       </svg>
@@ -167,10 +213,10 @@ export default function ServicesSection() {
       {/* Vertical grid lines overlay */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="h-full mx-5 md:mx-8 flex">
-          <div className="grid-line-v flex-1 border-l border-white/[0.36] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.36] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.36] origin-bottom" />
-          <div className="grid-line-v flex-1 border-l border-white/[0.36] border-r border-r-white/[0.36] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.76] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.76] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.76] origin-bottom" />
+          <div className="grid-line-v flex-1 border-l border-white/[0.76] border-r border-r-white/[0.76] origin-bottom" />
         </div>
       </div>
 
@@ -192,14 +238,14 @@ export default function ServicesSection() {
         </div>
 
         {/* Separator */}
-        <div className="grid-line-h hidden lg:block h-px bg-white/[0.36] origin-left" />
+        <div className="grid-line-h hidden lg:block h-px bg-white/[0.76] origin-left" />
 
         {/* Service cards - 4 columns */}
-        <div className="service-cards-grid px-5 lg:px-0 lg:bg-transparent bg-background grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="service-cards-grid px-5 pb-8 lg:px-0 lg:bg-transparent bg-background grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`service-card border-b border-white/[0.36] flex lg:flex-col  py-3 pl-3 md:pl-6 md:py-10 pr-3 md:pr-6 ${
+              className={`service-card border-b border-white/[0.00] flex lg:flex-col  py-3 pl-3 md:pl-6 md:py-10 pr-3 md:pr-6 ${
                 index > 0 ? '' : ''
               }`}
             > 
@@ -209,7 +255,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Title */}
-              <h3 className="text-white text-base md:text-lg font-normal mb-2 md:mb-5 tracking-tight">
+              <h3 className="text-white text-base md:text-2xl font-normal mb-2 md:mb-5 tracking-tight">
                 {service.title}
               </h3>
 
@@ -218,7 +264,7 @@ export default function ServicesSection() {
                 {service.items.map((item, itemIndex) => (
                   <p
                     key={itemIndex}
-                    className="text-white/40 text-xs md:text-sm font-light leading-relaxed"
+                    className="text-white/90 text-xs md:text-sm font-light leading-relaxed"
                   >
                     {item}
                   </p>
@@ -229,7 +275,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Bottom separator */}
-        <div className="grid-line-h h-px bg-white/[0.08] origin-left" />
+        {/* <div className="grid-line-h h-px bg-white/[0.08] origin-left" /> */}
       </div>
     </section>
   )

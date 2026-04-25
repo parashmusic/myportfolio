@@ -22,24 +22,24 @@ const projects = [
     subtitle: 'AI-powered CLI agent',
     category: 'AI/ML',
     image: '/juno.png',
-    titleColor: 'text-white',
+    titleColor: 'text-yellow-500',
     link: 'https://github.com/parashmusic/Juno-CLI',
   },
   {
-    title: 'Barakedge',
-    subtitle: 'Modern News & Media platform',
-    category: 'Web Development',
-    image: '/barak.png',
-    titleColor: 'text-[#e85d4a]',
-    link: 'https://barakedge.in/',
+    title: 'tracerX',
+    subtitle: 'Finance & project management',
+    category: 'App Development',
+    image: '/hero/009.png',
+    titleColor: 'text-indigo-500',
+    link: 'https://github.com/parashmusic/tracerX',
   },
   {
-    title: 'AeroSync',
-    subtitle: 'Decentralized P2P messaging',
-    category: 'App Development',
-    image: '/aerosync.png',
-    titleColor: 'text-white',
-    link: 'https://github.com/parashmusic/AeroSync',
+    title: 'Yantraksh',
+    subtitle: 'Official techfest platform',
+    category: 'Web Development',
+    image: '/hero/Scene 41.png',
+    titleColor: 'text-cyan-500',
+    link: 'https://www.yantraksh.co.in/',
   },
 ]
 
@@ -222,13 +222,16 @@ export default function PortfolioSection() {
 
       <div className="relative z-10 px-5 md:px-8">
         {/* 2x2 Project grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 relative">
+          {/* Middle Vertical Line - ends where the grid ends */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/[0.76] hidden md:block -translate-x-1/2 z-0 pointer-events-none" />
+          
           {projects.map((project, index) => {
             const isRight = index % 2 === 1
             const cardContent = (
               <div
                 className={`portfolio-card group cursor-pointer h-full transition-all duration-500 ${
-                  isRight ? 'md:pl-4 md:border-l md:border-white/[0.06]' : 'md:pr-4'
+                  isRight ? 'md:pl-4' : 'md:pr-4'
                 } ${index > 0 ? 'pt-8 md:pt-0' : ''}`}
               >
                 {/* Image container */}
@@ -254,11 +257,11 @@ export default function PortfolioSection() {
 
                 {/* Text below image */}
                 <div className="pt-4 pb-8 md:pb-10">
-                  <h3 className="text-sm md:text-base font-normal tracking-tight mb-1">
+                  <h3 className="text-md md:text-lg font-normal tracking-tight mb-1">
                     <span className={project.titleColor}>{project.title}</span>
-                    <span className="text-white/70 font-light"> — {project.subtitle}</span>
+                    <span className="text-white font-light"> — {project.subtitle}</span>
                   </h3>
-                  <p className="text-white/35 text-xs font-light">
+                  <p className="text-white/95 text-xs font-light">
                     {project.category}
                   </p>
                 </div>
@@ -284,7 +287,10 @@ export default function PortfolioSection() {
         </div>
 
         {/* View More Button */}
-        <div className="flex justify-center py-10 md:py-14">
+        <div className="flex justify-center py-10 md:py-14 relative">
+          {/* Bridge line that touches the button circle */}
+          <div className="absolute left-1/2 top-0 h-10 md:h-14 w-px bg-white/[0.76] -translate-x-1/2 hidden md:block pointer-events-none" />
+          
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}

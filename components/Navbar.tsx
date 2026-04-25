@@ -75,7 +75,7 @@ export default function Navbar() {
               <span className="text-white/40 text-sm font-light mx-1.5">
                 —
               </span>
-              <span className="text-white/40 text-sm font-light">
+              <span className="text-sm font-light">
                 Design • Code • Experience
               </span>
             </a>
@@ -96,10 +96,10 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.08 * i + 0.3, duration: 0.5 }}
-                  className="text-white/50 text-sm font-light hover:text-white transition-colors duration-300 relative group cursor-pointer"
+                  className=" text-sm font-light hover:text-[#ff3708] transition-colors duration-300 relative group cursor-pointer"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/40 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#ff3708] group-hover:w-full transition-all duration-300" />
                 </motion.a>
               ))}
             </div>
@@ -127,7 +127,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar bottom separator line */}
-        <div className="w-full h-px bg-white/[0.08]" />
+        <div className="w-full h-px bg-white/[0.5]" />
 
         {/* Mobile Menu */}
         <AnimatePresence>
