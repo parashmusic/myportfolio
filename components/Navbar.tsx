@@ -8,7 +8,8 @@ import StaircaseTransition from './StaircaseTransition'
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Work', href: '#portfolio' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Work', href: '#work' },
   { label: 'Contact', href: '#contact' },
 ]
 

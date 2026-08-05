@@ -1,5 +1,6 @@
 import HeroSection from '@/components/HeroSection'
 import ExperienceSection from '@/components/ExperienceSection'
+import SkillsSection from '@/components/SkillsSection'
 import ServicesSection from '@/components/ServicesSection'
 import PortfolioSection from '@/components/PortfolioSection'
 import TrustedSection from '@/components/TrustedSection'
@@ -15,6 +16,7 @@ export default function Home() {
       {/* <Preloader /> */}
       <HeroSection />
       <ExperienceSection />
+      <SkillsSection />
       <ServicesSection />
       <PortfolioSection />
       {/* <TrustedSection /> */}
