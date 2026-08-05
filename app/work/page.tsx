@@ -14,14 +14,14 @@ type Category = (typeof categories)[number]
 
 const allProjects = [
   // App Development
-  {
-    title: 'Trientra',
-    subtitle: 'Safety & Intelligence Platform',
-    category: 'App Development',
-    tag: 'Safety & Intelligence',
-    image: '/hero/Group4.png',
-    titleColor: 'text-[#4ade80]',
-    link: 'https://trinetrabeta.vercel.app/',
+ {
+    title: 'Juno CLI',
+    subtitle: 'AI-powered CLI agent',
+    category: 'AI/ML',
+    tag: 'AI/ML + CLI',
+    image: 'https://codebyparash.vercel.app/assets/Scene2-DuVYt_I_.png',
+    titleColor: 'text-white',
+    link: 'https://github.com/parashmusic/Juno-CLI',
   },
   {
     title: 'AeroSync',
@@ -61,6 +61,15 @@ const allProjects = [
     titleColor: 'text-[#3b82f6]',
     link: 'https://github.com/parashmusic/Jalbhoomi-Raksha',
   },
+   {
+    title: 'Trientra',
+    subtitle: 'Safety & Intelligence Platform',
+    category: 'App Development',
+    tag: 'Safety & Intelligence',
+    image: '/hero/Group4.png',
+    titleColor: 'text-[#4ade80]',
+    link: 'https://trinetrabeta.vercel.app/',
+  },
   {
     title: 'Cutie AI Buddy',
     subtitle: 'Agentic local AI assistant',
@@ -70,15 +79,7 @@ const allProjects = [
     titleColor: 'text-[#a78bfa]',
     link: 'https://github.com/parashmusic/Cutie_ai',
   },
-  {
-    title: 'Juno CLI',
-    subtitle: 'AI-powered CLI agent',
-    category: 'AI/ML',
-    tag: 'AI/ML + CLI',
-    image: 'https://codebyparash.vercel.app/assets/Scene2-DuVYt_I_.png',
-    titleColor: 'text-white',
-    link: 'https://github.com/parashmusic/Juno-CLI',
-  },
+  
   {
     title: 'Emotion Detection',
     subtitle: 'Real-time DL emotion classifier',
@@ -318,73 +319,6 @@ export default function WorkPage() {
 
   return (
     <main ref={sectionRef} className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Navbar */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/90 backdrop-blur-xl"
-      >
-        <div className="w-full px-5 md:px-8">
-          <div className="flex items-center justify-between h-12 md:h-14">
-            <Link href="/" className="flex items-center gap-0 group shrink-0">
-              <span className="text-white/90 text-sm font-normal tracking-tight">
-                Parash.dev
-              </span>
-              <span className="text-white/40 text-sm font-light mx-1.5">—</span>
-              <span className="text-white/40 text-sm font-light">Digital Agency</span>
-            </Link>
-
-            {/* Center dots */}
-            <div className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
-              <span className="w-2 h-2 rounded-full bg-white/80" />
-              <span className="w-2 h-2 rounded-full border border-white/30" />
-            </div>
-
-            {/* Nav links */}
-            <div className="hidden md:flex items-center gap-7">
-              <Link
-                href="/work"
-                className="text-white text-sm font-light transition-colors duration-300 relative group cursor-pointer"
-              >
-                Work
-                <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-white/40" />
-              </Link>
-              <Link
-                href="/#services"
-                className="text-white/50 text-sm font-light hover:text-white transition-colors duration-300 relative group cursor-pointer"
-              >
-                Services
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/40 group-hover:w-full transition-all duration-300" />
-              </Link>
-              <Link
-                href="/#about"
-                className="text-white/50 text-sm font-light hover:text-white transition-colors duration-300 relative group cursor-pointer"
-              >
-                About
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/40 group-hover:w-full transition-all duration-300" />
-              </Link>
-              <Link
-                href="/#contact"
-                className="text-white/50 text-sm font-light hover:text-white transition-colors duration-300 relative group cursor-pointer"
-              >
-                Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/40 group-hover:w-full transition-all duration-300" />
-              </Link>
-            </div>
-
-            {/* Mobile back button */}
-            <Link
-              href="/"
-              className="md:hidden text-white/70 text-sm font-light hover:text-white transition-colors"
-            >
-              ← Back
-            </Link>
-          </div>
-        </div>
-        <div className="w-full h-px bg-white/[0.58]" />
-      </motion.nav>
-
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-14 md:pt-14">
         {/* Grid lines overlay */}

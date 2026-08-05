@@ -3,6 +3,8 @@
 import { useRef, useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FeyCards } from '@/blocks/fey-cards'
+import { TrialButton } from '@/components/lightswind/trial-button'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import dynamic from 'next/dynamic'
@@ -91,6 +93,7 @@ export default function HeroSection() {
 
   return (
     <section
+      id="home"
       ref={sectionRef}
       className="relative pt-14 md:pt-14 overflow-hidden"
     >
@@ -167,8 +170,46 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-5 md:mt-7 flex items-center gap-2"
+            className="mt-5 md:mt-7 flex flex-wrap items-center gap-3 sm:gap-4"
           >
+            <TrialButton
+              onClick={() => window.open('https://drive.google.com/file/d/1tAxnk5mFcHmietQl_HOHdaqcWQrmeU-5/view?usp=sharing', '_blank')}
+              className="py-2 px-5 text-xs font-semibold uppercase tracking-wider text-white"
+            >
+              Resume
+            </TrialButton>
+
+            {/* Social Icon Links */}
+            <div className="flex items-center gap-2">
+              <a
+                href="https://github.com/parashmusic"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="p-2.5  bg-white/5 text-white/70 hover:text-white hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-sm"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/parashmonidas"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-2.5  bg-white/5  text-white/70 hover:text-white hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-sm"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:parashmoni.info@gmail.com"
+                aria-label="Email"
+                className="p-2.5  bg-white/5  text-white/70 hover:text-white hover:bg-white/15 hover:border-white/30 transition-all duration-300 shadow-sm"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+
+            <span className="w-px h-5 bg-white/20 mx-1 hidden sm:inline-block" />
+
             <span className="text-white/35 text-[clamp(0.8rem,1.6vw,1.05rem)] font-light tracking-widest uppercase">
               Specializing in
             </span>

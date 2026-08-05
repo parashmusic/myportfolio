@@ -2,12 +2,13 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { usePathname, useRouter } from 'next/navigation'
 import StaircaseTransition from './StaircaseTransition'
 
 const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Work', href: '#portfolio' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -15,7 +16,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
-  const [targetHref, setTargetHref] = useState<string | null>(null)
+  const [pendingHref, setPendingHref] = useState<string | null>(null)
+  
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,22 +32,30 @@ export default function Navbar() {
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setIsOpen(false)
-    setTargetHref(href)
-    setIsTransitioning(true)
 
-    // Scroll to target during the transition hold phase
-    setTimeout(() => {
-      const targetEl = document.querySelector(href)
-      if (targetEl) {
-        // Temporarily disable smooth scroll so it jumps instantly
-        targetEl.scrollIntoView({ behavior: 'auto', block: 'start' })
-      }
-    }, 500) // fires at the midpoint of the transition when screen is fully covered
-  }, [])
+    if (pathname === '/') {
+      setPendingHref(href)
+      setIsTransitioning(true)
+      setTimeout(() => {
+        const targetEl = document.querySelector(href)
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'auto', block: 'start' })
+        } else {
+          window.scrollTo({ top: 0, behavior: 'auto' })
+        }
+      }, 500)
+    } else {
+      setPendingHref(href)
+      setIsTransitioning(true)
+      setTimeout(() => {
+        router.push('/' + href)
+      }, 500)
+    }
+  }, [pathname, router])
 
   const handleTransitionComplete = useCallback(() => {
     setIsTransitioning(false)
-    setTargetHref(null)
+    setPendingHref(null)
   }, [])
 
   return (
@@ -68,7 +80,11 @@ export default function Navbar() {
         <div className="w-full px-5  md:px-8">
           <div className="flex items-center justify-between h-12 md:h-14">
             {/* Logo — left */}
-            <a href="#" className="flex items-center gap-0 group shrink-0">
+            <a
+              href="#home"
+              onClick={(e) => handleNavClick(e, '#home')}
+              className="flex items-center gap-0 group shrink-0"
+            >
               <span className="text-white/90 text-sm font-normal tracking-tight">
                 Parash.dev
               </span>

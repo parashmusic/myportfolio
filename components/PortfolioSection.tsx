@@ -5,19 +5,12 @@ import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import WoofyHoverImage from '@/components/lightswind/woofy-hover-image'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
-  {
-    title: 'Trientra',
-    subtitle: 'Safety & Intelligence Platform',
-    category: 'App Development',
-    image: '/trin.png',
-    titleColor: 'text-[#4ade80]',
-    link: 'https://trinetrabeta.vercel.app/',
-  },
-  {
+    {
     title: 'Juno CLI',
     subtitle: 'AI-powered CLI agent',
     category: 'AI/ML',
@@ -33,6 +26,15 @@ const projects = [
     titleColor: 'text-indigo-500',
     link: 'https://github.com/parashmusic/tracerX',
   },
+  {
+    title: 'Trientra',
+    subtitle: 'Safety & Intelligence Platform',
+    category: 'App Development',
+    image: '/trin.png',
+    titleColor: 'text-[#4ade80]',
+    link: 'https://trinetrabeta.vercel.app/',
+  },
+
   {
     title: 'Yantraksh',
     subtitle: 'Official techfest platform',
@@ -246,11 +248,13 @@ export default function PortfolioSection() {
                     <div className="portfolio-stair-step flex-1 bg-[#0a0a0a] origin-bottom border-x border-white/5" />
                   </div>
 
-                  <img
+                  <WoofyHoverImage
                     src={project.image}
                     alt={project.title}
+                    width="100%"
+                    height="100%"
                     className="portfolio-img w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-                    loading="lazy"
+                    effectType="inversion"
                   />
                   {/* Subtle hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -298,24 +302,15 @@ export default function PortfolioSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.3, type: 'spring', stiffness: 200, damping: 15 }}
           >
-            <Link href="/work" aria-label="View more work" className="block">
+            <Link href="/work" aria-label="View more work" className="block group">
               <motion.div
                 initial="initial"
                 whileHover="hover"
-                className="relative flex items-center justify-center h-16 rounded-full border border-white/20 bg-transparent cursor-pointer overflow-hidden"
-                variants={{
-                  initial: { width: '4rem' },
-                  hover: { 
-                    width: '10rem', 
-                    backgroundColor: '#ffffff',
-                    borderColor: '#ffffff'
-                  }
-                }}
-                transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
+                className="relative flex items-center justify-center h-16 rounded-full cursor-pointer overflow-hidden transition-all duration-500 w-[10rem] bg-white border border-white md:w-16 md:bg-transparent md:border-white/20 md:hover:w-[10rem] md:hover:bg-white md:hover:border-white"
               >
-                {/* Plus icon — centered and visible initially */}
+                {/* Arrow icon — hidden on mobile, visible on desktop initially */}
                 <motion.div
-                  className="absolute flex items-center justify-center"
+                  className="hidden md:flex absolute items-center justify-center"
                   variants={{
                     initial: { opacity: 1, scale: 1 },
                     hover: { opacity: 0, scale: 0.5 }
@@ -328,16 +323,18 @@ export default function PortfolioSection() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="text-white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white animate-pulse"
                   >
-                    <path d="M12 5v14M5 12h14" />
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 </motion.div>
 
-                {/* "View More" text — appears only on hover */}
+                {/* "View More" text — always visible on mobile, animated on desktop hover */}
                 <motion.span
-                  className="absolute whitespace-nowrap text-[#0a0a0a] text-sm font-medium tracking-tight"
+                  className="whitespace-nowrap text-[#0a0a0a] text-sm font-medium tracking-tight opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
                   variants={{
                     initial: { opacity: 0, y: 10, filter: 'blur(4px)' },
                     hover: { opacity: 1, y: 0, filter: 'blur(0px)' }

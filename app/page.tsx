@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
+import ExperienceSection from '@/components/ExperienceSection'
 import ServicesSection from '@/components/ServicesSection'
 import PortfolioSection from '@/components/PortfolioSection'
 import TrustedSection from '@/components/TrustedSection'
@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       {/* <Preloader /> */}
-      <Navbar />
       <HeroSection />
+      <ExperienceSection />
       <ServicesSection />
       <PortfolioSection />
       {/* <TrustedSection /> */}
