@@ -208,19 +208,20 @@ export default function PortfolioSection() {
     <section
       ref={sectionRef}
       id="portfolio"
-      className="relative"
+      className="relative w-full"
     >
+      <div className="max-w-[1320px] mx-auto relative">
       {/* Vertical grid lines overlay */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+      {/* <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="h-full mx-5 md:mx-8 flex">
           <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
           <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
           <div className="grid-line-v flex-1 border-l border-white/[0.06] origin-bottom" />
           <div className="grid-line-v flex-1 border-l border-white/[0.06] border-r border-r-white/[0.06] origin-bottom" />
         </div>
-      </div>
+      </div> */}
 
-      <div className="relative z-10 px-5 md:px-8">
+      <div className="relative z-10 px-5   md:px-8">
         {/* 2x2 Project grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 relative">
           {/* Middle Vertical Line - ends where the grid ends */}
@@ -349,6 +350,7 @@ export default function PortfolioSection() {
             </Link>
           </motion.div>
         </div>
+      </div>
       </div>
     </section>
   )

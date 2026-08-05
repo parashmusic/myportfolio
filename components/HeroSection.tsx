@@ -2,8 +2,12 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FeyCards } from '@/blocks/fey-cards'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import dynamic from 'next/dynamic'
+
+const Lanyard = dynamic(() => import('@/components/Lanyard'), { ssr: false })
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -93,8 +97,20 @@ export default function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 bg-[#0a0a0a] pointer-events-none" />
 
+      {/* Lanyard Element - Absolute positioned to the right */}
+      {/* <div className="absolute top-0 right-0 w-full md:w-2/3 h-full z-100 pointer-events-none flex justify-end items-start pt-10">
+        <div className="pointer-events-auto w-full h-[600px] md:h-[800px]">
+          <Lanyard position={[0, 0, 30]} gravity={[0, -40, 0]} frontImage="/me2.jpg"
+  backImage="/me2.jpg"
+  imageFit="cover"
+  lanyardImage="/ribbon-texture.svg"
+  lanyardWidth={1}
+  lanyardRepeat={[-9, 1]}/>
+        </div>
+      </div> */}
+
       {/* Vertical grid lines overlay */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         {/* 4 vertical columns */}
         <div className="h-full max-w-none mx-5 md:mx-8 flex">
           <div className="grid-line-v flex-1  border-white/[0.1] origin-bottom" />
@@ -183,243 +199,10 @@ export default function HeroSection() {
         </div>
 
         {/* Separator line below headline */}
-        {/* <div className="grid-line-h h-px bg-white/[0.28] origin-left" /> */}
+        {/* <div className="grid-line-h h-px bg-white/[0.28] origin-left" /> */} 
 
-        {/* 3x3 Showcase Image Grid */}
-        <div className="py-6  md:py-8">
-          <div className="grid grid-cols-3 gap-2 md:gap-3">
-
-            {/* Card 1 — with badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] relative cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="/hero/Scene 41.png"
-                  alt="Dark tech abstract"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-              {/* Hover shimmer overlay */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.35 }}
-                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 60%)' }}
-              />
-              
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img 
-                  src="https://codebyparash.vercel.app/assets/rmchome-BlUD0lpa.png"
-                  alt="Dashboard mockup"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.35 }}
-                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 60%)' }}
-              />
-            </motion.div>
-
-            {/* Card 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="https://codebyparash.vercel.app/assets/rmc-08agVScG.png"
-                  alt="Color palette design"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-            </motion.div>
-
-            {/* Card 4 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="https://codebyparash.vercel.app/assets/tracerx-Cyv7dVJV.png"
-                  alt="UI screenshots grid"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-            </motion.div>
-
-            {/* Card 5 — play button */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] relative cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="/hero/bill.png"
-                  alt="Video showcase"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-             
-            </motion.div>
-
-            {/* Card 6 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="/hero/009.png"
-                  alt="Product design"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-            </motion.div>
-
-            {/* Card 7 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="/hero/cleovv.png"
-                  alt="Laptop mockup"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-            </motion.div>
-
-            {/* Card 8 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="/hero/Group4.png"
-                  alt="Mobile design"
-                  className="w-full scale-110 h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-            </motion.div>
-
-            {/* Card 9 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="aspect-[4/3] rounded-none overflow-hidden bg-[#111] cursor-pointer"
-            >
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.06 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-              >
-                <img
-                  src="/hero/Group9.png"
-                  alt="Phone in hand"
-                  className="w-full h-full object-cover"
-                  
-                  loading="lazy"
-                />
-              </motion.div>
-            </motion.div>
-
-          </div>
+        <div className="py-0 md:py-12 pt-28 md:pb-1">
+          <FeyCards />
         </div>
 
         {/* Separator line below showcase grid */}

@@ -208,8 +208,9 @@ export default function ServicesSection() {
     <section
       ref={sectionRef}
       id="services"
-      className="relative"
+      className="relative w-full "
     >
+      <div className="max-w-[1320px] mx-auto relative">
       {/* Vertical grid lines overlay */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="h-full mx-5 md:mx-8 flex">
@@ -220,7 +221,7 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="relative z-10 px-5 md:px-8">
+      <div className="relative z-10 px-5  md:px-8">
         {/* Headline */}
         <div ref={headlineRef} className="pt-12 bg-background md:pt-20 pb-8 md:pb-12">
           <motion.p
@@ -276,6 +277,7 @@ export default function ServicesSection() {
 
         {/* Bottom separator */}
         {/* <div className="grid-line-h h-px bg-white/[0.08] origin-left" /> */}
+      </div>
       </div>
     </section>
   )
