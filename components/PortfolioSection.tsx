@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
 import WoofyHoverImage from '@/components/lightswind/woofy-hover-image'
+import { Code2 } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -303,19 +304,12 @@ export default function PortfolioSection() {
             transition={{ delay: 0.3, type: 'spring', stiffness: 200, damping: 15 }}
           >
             <Link href="/work" aria-label="View more work" className="block group">
-              <motion.div
-                initial="initial"
-                whileHover="hover"
+              <div
                 className="relative flex items-center justify-center h-16 rounded-full cursor-pointer overflow-hidden transition-all duration-500 w-[10rem] bg-white border border-white md:w-16 md:bg-transparent md:border-white/20 md:hover:w-[10rem] md:hover:bg-white md:hover:border-white"
               >
                 {/* Arrow icon — hidden on mobile, visible on desktop initially */}
-                <motion.div
-                  className="hidden md:flex absolute items-center justify-center"
-                  variants={{
-                    initial: { opacity: 1, scale: 1 },
-                    hover: { opacity: 0, scale: 0.5 }
-                  }}
-                  transition={{ duration: 0.2 }}
+                <div
+                  className="hidden md:flex absolute inset-0 items-center justify-center transition-all duration-300 md:group-hover:opacity-0 md:group-hover:scale-50"
                 >
                   <svg
                     width="24"
@@ -330,20 +324,16 @@ export default function PortfolioSection() {
                   >
                     <path d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
-                </motion.div>
+                </div>
 
                 {/* "View More" text — always visible on mobile, animated on desktop hover */}
-                <motion.span
-                  className="whitespace-nowrap text-[#0a0a0a] text-sm font-medium tracking-tight opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
-                  variants={{
-                    initial: { opacity: 0, y: 10, filter: 'blur(4px)' },
-                    hover: { opacity: 1, y: 0, filter: 'blur(0px)' }
-                  }}
-                  transition={{ delay: 0.1, duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                <span
+                  className="whitespace-nowrap text-[#0a0a0a] text-sm font-medium tracking-tight transition-all duration-300 md:opacity-0 md:translate-y-2 md:blur-[2px] md:group-hover:opacity-100 md:group-hover:translate-y-0 md:group-hover:blur-none"
                 >
+                  
                   View More
-                </motion.span>
-              </motion.div>
+                </span>
+              </div>
             </Link>
           </motion.div>
         </div>
