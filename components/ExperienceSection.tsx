@@ -45,7 +45,7 @@ const experienceEvents: TimelineEvent[] = [
     subtitle: 'Yantraksh 2026',
     description: (
       <p>
-        Led the entire technical effort behind NIT Silchar's flagship tech fest — from zero to a platform that absorbed <strong className="text-white/90 font-medium">30,000+ page views</strong> and <strong className="text-white/90 font-medium">500+ concurrent users</strong> on event day without flinching. I ran a <strong className="text-white/90 font-medium">7-person</strong> team, set up self-hosted contest infrastructure, and built the data backend that kept <strong className="text-white/90 font-medium">600+</strong> registrations organised in real time.
+        Led the entire technical effort behind Assam University's annual technical fest — from zero to a platform that absorbed <strong className="text-white/90 font-medium">30,000+ page views</strong> and <strong className="text-white/90 font-medium">500+ concurrent users</strong> on event day without flinching. I ran a <strong className="text-white/90 font-medium">7-person</strong> team, set up self-hosted contest infrastructure, and built the data backend that kept <strong className="text-white/90 font-medium">600+</strong> registrations organised in real time.
       </p>
     ),
     icon: (
